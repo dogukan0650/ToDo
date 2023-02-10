@@ -21,15 +21,14 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("tr.com.burakgul")).paths(PathSelectors.regex("/.*")).build()
+				.apis(RequestHandlerSelectors.basePackage("com.example.ToDo")).paths(PathSelectors.regex("/.*")).build()
 				.apiInfo(this.apiInfo());
 	}
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("Profile API")
-				.description("Basit bir anasayfa ve blog için API desteği sağlar.")
-				.contact(new Contact("Burak GÜL", "https://burakgul.com.tr", "contact@burakgul.com.tr"))
-				.version("0.0.1").build();
+				.description("Description")
+				.build();
 	}
 
 	@Bean
